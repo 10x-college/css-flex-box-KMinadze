@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1b;
+    font-family: sans-serif;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    padding-inline: 40px;
+    display: flex;
+    z-index: 999;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #1a1a1b;
+    box-shadow: 6px 6px 12px rgba(221, 223, 224, 0.4);
+
+
+    a {
+        font-size: 30px;
+        color: #d3d1d1;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    a:hover {
+        color: #c5b8b8;
+        transform: scale(1.1);
+    }
+
+    .headerActions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+
+        .dateActions,
+        .searchAction {
+            color: #d3d1d1;
+            font-size: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .searchAction {
+            border-right: 2px solid #9a969633;
+            padding-right: 10px;
+        }
+
+        .dateActions:hover,
+        .searchAction:hover {
+            color: #d3d1d187;
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #d3d1d1;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        img:hover {
+            border: 4px solid #c5b8b8;
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+/* Aside Navigation  */
+
+.asideNavigation {
+    height: 70vh;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+}
+
+.asideNavigation ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.asideNavigation ul li {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.asideNavigation ul li img {
+    width: 28px;
+    height: 28px;
+}
+
+.asideNavigation ul .action {
+    background-color: #4169E114;
+}
+
+.asideNavigation ul li:hover {
+    background-color: #4169E114;
+    transform: scale(1.3);
+}
+
+/* Main Section */
+
+main {
+    width: calc(100% - 100px);
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: #f7f0f0;
+    padding: 30px;
+}
+
+/* Top Section */
+
+main .folders {
+    width: 70%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .folders .myFolders {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .folders .myFolders h3 {
+    font-size: 24px;
+}
+
+main .folders .myFolders p {
+    font-size: 14px;
+    color: #d3d1d187;
+    letter-spacing: 1px;
+}
+
+main .folders i {
+    background-color: #7b20e2;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px #7b20e27a;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+main .folders i:hover {
+    box-shadow: 0 0 30px #7b20e27a;
+    transform: scale(0.8);
+}
+
+
+/* Center Section */
+
+main .fileCategories {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+main .fileCategories .folderCards {
+    width: 190px;
+    height: 140px;
+    background-color: #1d1d1d;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+    box-shadow: 6px 6px 12px rgba(221, 223, 224, 0.4);
+}
+
+main .fileCategories .folderCards i {
+    font-size: 40px;
+    color: #3ba39f;
+    text-shadow: 2px 2px 6px #ebecec;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+main .fileCategories .folderCards p {
+    font-weight: 800;
+    text-shadow: 1px 1px 2px #d1d4d4;
+}
+
+main .fileCategories .folderCards span {
+    font-weight: 800;
+    font-size: 12px;
+    color: #3ba39f;
+    text-shadow: 1px 1px 2px #d5e1e1;
+}
+
+main .fileCategories .folderCards i:hover {
+    transform: scale(1.3);
+    color: #fcc15b;
+}
+
+main .progressBar {
+    width: 70%;
+    height: 300px;
+    background-color: #1d1d1d;
+    border-radius: 30px;
+    margin-top: 30px;
+    box-shadow: 6px 6px 12px rgba(221, 223, 224, 0.4);
+    display: flex;
+}
+
+main .progressBar .progressIndicator {
+    height: 100%;
+    width: 14%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 30px;
+    font-size: 10px;
+    color: #d3d1d1;
+}
+
+main .progressBar .weekDays {
+    height: 90%;
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+main .progressBar .weekDays .barBoxes {
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #d3d1d12c;
+    border-bottom: 2px solid #d3d1d12c;
+}
+
+main .progressBar .weekDays .barBoxes .box {
+    height: 25%;
+    width: 100%;
+    border-top: 1px solid #d3d1d112;
+}
+
+main .progressBar .weekDays .barBoxes .box_4 {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+main .progressBar .weekDays .barBoxes .box_4 .bar {
+    width: 20px;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, #e97b68 100%);
+    border-radius: 30px;
+    position: absolute;
+}
+.bar_1{
+    bottom: 50px;
+    left: 76px;
+}
+.bar_2{
+    bottom: 50px;
+    left: 152px;
+}
+.bar_3{
+    bottom: 100px;
+    left: 228px;
+}
+.bar_4{
+    bottom: 80px;
+    left: 304px;
+}
+.bar_5{
+    bottom: 60px;
+    left: 380px;
+}
+.bar_6{
+    bottom: 120px;
+    left: 456px;
+}
+.bar_7{
+    bottom: 160px;
+    left: 532px;
+}
+main .progressBar ul {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    gap: 2px;
+    justify-content: space-evenly;
+    padding-inline: 20px;
+    font-size: 8px;
+    color: #d3d1d1;
+}
+
+/* Bottom Section */
+main .favFolders {
+    width: 70%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    gap: 10px;
+}
+
+main .favFolders .myFolders {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .favFolders .myFolders h3 {
+    font-size: 24px;
+}
+
+main .favFolders .myFolders p {
+    font-size: 14px;
+    color: #d3d1d187;
+    letter-spacing: 1px;
+}
+main .favFolders .fileCategories{
+    width: 100%;
+    padding-bottom: 40px;
+}
+main .favFolders .fileCategories .folderCards{
+    width: 40%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .favFolders .fileCategories .folderCards .folderCardImg{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+    i{
+        font-size: 20px;
+        border-radius: 50%;
+        color: #ffffff;
+    }
+}
