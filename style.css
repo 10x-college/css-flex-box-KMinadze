@@ -3,20 +3,23 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    background-color: #292625;
+    list-style-type: none;
 }
 
 body {
     width: 100vw;
     height: 100vh;
+    background-color: #292625;
 }
 
 header {
-    height: 80px;
-    padding-inline: 30px;
+    height: 100px;
+    width: 100%;
+    padding-inline: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 
     a {
         font-size: 30px;
@@ -24,7 +27,8 @@ header {
         cursor: pointer;
         transition: 0.5s;
     }
-    a:hover{
+
+    a:hover {
         color: #c5b8b8;
         transform: scale(1.1);
     }
@@ -70,4 +74,50 @@ header {
             transform: scale(1.1);
         }
     }
+}
+
+
+/* Aside Navigation  */
+
+.asideNavigation {
+    height: 70vh;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.asideNavigation ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.asideNavigation ul li {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.asideNavigation ul li img {
+    width: 28px;
+    height: 28px;
+}
+
+.asideNavigation ul .action {
+    background-color: #4169E114;
+}
+
+.asideNavigation ul li:hover {
+    background-color: #4169E114;
+    color: #7B20E2;
 }
